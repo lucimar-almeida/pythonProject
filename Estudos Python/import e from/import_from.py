@@ -3,8 +3,12 @@
 # raiz = sqrt(num)
 # print('A raiz de {} é igual a {}.'.format(num, floor(raiz)))
 
-# import random
-# num = random.randint(1, 10)
-# print(num)
+import random
+num = random.randint(1, 10)
+print(num)
 
-import emoji
+# import emoji
+#
+# print(emoji.emojize("olá, mundo :earth_americas:", use_aliases=True))
+
+
