@@ -64,38 +64,38 @@
 
 #----------------------------------------------------
 
-#Exercicio 02 -> Crie um algoritmo que leia um número e mostre o seu dobro, triplo, e raiz quadrada.
-
+# Exercicio 02 -> Crie um algoritmo que leia um número e mostre o seu dobro, triplo, e raiz quadrada.
+#
 # n = int(input('Digite um número: '))
 # dobro = 2*n
 # triplo = 3*n
 # raiz = n**(1/2)
 # print('O número digitado foi: {}\nO dobro é: {}\nO triplo é: {}\nRaiz quadrada: {:.0f}'.format(n, dobro, triplo, raiz))
-
-#---------------------------------------------------------
-
-#Exercicio 03 -> Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua medía.
-
+#
+# ---------------------------------------------------------
+#
+# Exercicio 03 -> Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua medía.
+#
 # nome = input("Aluno: ")
 # n1 = int(input('Digite a nota 1: '))
 # n2 = int(input('Digite a nota 2: '))
 # media = (n1+n2)/2
 # print('O aluno(a) {} tem notas:\nNota 1: {}\nNota 2: {}\nMédia de: {}'.format(nome, n1, n2, media))
-
-#-------------------------------------------------------
-
-#Exercicio 04 -> Escreva um programa que leia um valor em metros e o exiba convertido em centimetros e milimetros.
-
+#
+# -------------------------------------------------------
+#
+# Exercicio 04 -> Escreva um programa que leia um valor em metros e o exiba convertido em centimetros e milimetros.
+#
 # valor = int(input('Digite um valor em metros(m): '))
 # cent = valor*100
 # mili = valor*1000
 # print('{} metros são equivalentes a: {} centimentros e a {} milimetros.'.format(valor, cent, mili))
-
-#------------------------------------------------------
-
-#Exercicio 05 -> Faça um programa que leia um número inteiro qualquer e mostre a sua tabuada
-
-
+#
+# ------------------------------------------------------
+#
+# Exercicio 05 -> Faça um programa que leia um número inteiro qualquer e mostre a sua tabuada
+#
+#
 # n = int(input('Digite um número: '))
 # a = 1*n
 # b = 2*n
