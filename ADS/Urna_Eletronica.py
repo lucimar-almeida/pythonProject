@@ -110,8 +110,7 @@ def tela_votação_prefeito():
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == '1':2
-
+        if conf == '1':
             print('João Gois')
             prefeitos[1]['votos'] += 1
             tela_votação_vereador()
