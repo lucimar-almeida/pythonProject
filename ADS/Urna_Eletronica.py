@@ -89,7 +89,7 @@ def tela_votação_prefeito():
          [ 2 ] Não
          : '''))
         while conf != '1' and conf != '2':
-            conf = str(input('''Confirma seu voto em ADEMIR DA GUIA para prefeito2
+            conf = str(input('''Confirma seu voto em ADEMIR DA GUIA para prefeito
             :
              [ 1 ] Sim
              [ 2 ] Não
@@ -361,5 +361,4 @@ def tela_fim():
                 print(f'{k} {v}')
     else:
         tela_fim()
-
 tela_principal()
