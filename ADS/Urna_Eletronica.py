@@ -16,7 +16,8 @@ def subtitulo(text):
 
 # Candidatos a prefeito
 prefeitos = [{'Candidato': 'Ademir da Guia', 'votos': 0}, # 'Número': 10
-             {'Candidato': 'João Gois', 'votos': 0}] # 'Número': 20
+             {'Candidato': 'João Gois', 'votos': 0}, # 'Número': 20
+             {'Candidato': 'Ariana Queiroz', 'votos': 0}]
 
 # Condidatos a vereadores
 vereadores = [{'vereador': 'Ana Maria', 'votos': 0}, #'Número': 35401
@@ -40,6 +41,7 @@ tela('         Eleições 2022')
 tela('''Candidatos a prefeito:
      [ 10 ] Ademir da Guia
      [ 20 ] João Gois
+     [ 30 ] Ariana Queiroz
      
 Candidatos a vereador:
      [ 35401 ] Ana Maria
@@ -116,21 +118,50 @@ def tela_votação_prefeito():
             tela_votação_vereador()
         else:
             tela_votação_prefeito()
-    elif voto == '1':
-        option = str(input('tem certeza que deseja votar em "BRANCO"? Sim = [S], Não = [N]: '))
-        while option != 's' and option != 'n':
-            option = str(input('tem certeza que deseja votar em "BRANCO"? Sim = [S], Não = [N]: '))
-        if option == 's':
+    elif voto == 30:
+        conf = str(input('''Confirma seu voto em ARIANA QUEIROZ para prefeito:
+         [ 1 ] Sim
+         [ 2 ] Não
+         : '''))
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em ARIANA QUEIROZ para prefeito
+            :
+             [ 1 ] Sim
+             [ 2 ] Não
+             : '''))
+        if conf == '1':
+            print('Arina Queiroz')
+            prefeitos[2]['votos'] += 1
+            tela_votação_vereador()
+        else:
+            tela_votação_prefeito()
+    elif voto == 1:
+        option = str(input('''tem certeza que deseja votar em "BRANCO"?
+        [ 1 ] Sim
+        [ 2 ] Não
+        : '''))
+        while option != '1' and option != '2':
+            option = str(input(''''tem certeza que deseja votar em "BRANCO"?
+        [ 1 ] Sim
+        [ 2 ] Não
+        : '''))
+        if option == '1':
             print('Seu voto foi "Branco" para prefeito.')
             nulos_brancos_prefeitos[1]['Brancos'] += 1
             tela_votação_vereador()
         else:
             tela_votação_prefeito()
     else:
-        option = str(input('Tem certeza que quer "ANULAR" seu voto? Sim = [S], Não = [N]: '))
-        while option != 's' and option != 'n':
-            option = str(input('Tem certeza que quer "ANULAR" seu voto? Sim = [S], Não = [N]: '))
-        if option == 'n':
+        option = str(input('''Tem certeza que quer "ANULAR" seu voto?
+        [ 1 ] Sim
+        [ 2 ] Não
+        : '''))
+        while option != '1' and option != '2':
+            option = str(input('''Tem certeza que quer "ANULAR" seu voto?
+        [ 1 ] Sim
+        [ 2 ] Não
+        : '''))
+        if option == '2':
             tela_votação_prefeito()
         else:
             print('Seu voto para prefeito foi anulado.')
@@ -144,180 +175,192 @@ def tela_votação_vereador():
     voto = int(input('Digite o número do seu candidato a vereador'
                      '\nou digite 1 para votar em "Branco": '))
     if voto == 35401:
-        conf = int(input('''Confirma seu voto em ANA MARIA:
+        conf = str(input('''Confirma seu voto em ANA MARIA:
          [ 1 ] Sim
          [ 2 ] Não
          : '''))
-        while conf != 1 and conf != 2:
-            conf = int(input('''Confirma seu voto em ANA MARIA:
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em ANA MARIA:
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == 1:
+        if conf == '1':
             print('Ana Maria')
             vereadores[0]['votos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     elif voto == 25600:
-        conf = int(input('''Confirma seu voto em LUIZ HERMINIO para vereador:
+        conf = str(input('''Confirma seu voto em LUIZ HERMINIO para vereador:
          [ 1 ] Sim
          [ 2 ] Não
          : '''))
-        while conf != 1 and conf != 2:
-            conf = int(input('''Confirma seu voto em LUIZ HERMINIO para vereador:
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em LUIZ HERMINIO para vereador:
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == 1:
+        if conf == '1':
             print('Luiz Herminio')
             vereadores[1]['votos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     elif voto == 10123:
-        conf = int(input('''Confirma seu voto em FERNANDA SILVA para vereador:
+        conf = str(input('''Confirma seu voto em FERNANDA SILVA para vereador:
          [ 1 ] Sim
          [ 2 ] Não
          : '''))
-        while conf != 1 and conf != 2:
-            conf = int(input('''Confirma seu voto em FERNANDA SILVA para vereador:
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em FERNANDA SILVA para vereador:
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == 1:
+        if conf == '1':
             print('Fernanda Silva')
             vereadores[2]['votos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     elif voto == 10456:
-        conf = int(input('''Confirma seu voto em FELIPE CAMARGO para vereador:
+        conf = str(input('''Confirma seu voto em FELIPE CAMARGO para vereador:
          [ 1 ] Sim
          [ 2 ] Não
          : '''))
-        while conf != 1 and conf != 2:
-            conf = int(input('''Confirma seu voto em FELIPE CAMARGO para vereador:
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em FELIPE CAMARGO para vereador:
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == 1:
+        if conf == '1':
             print('Felipe Camargo')
             vereadores[3]['votos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     elif voto == 20256:
-        conf = int(input('''Confirma seu voto em EVANDRO ALVES para vereador:
+        conf = str(input('''Confirma seu voto em EVANDRO ALVES para vereador:
          [ 1 ] Sim
          [ 2 ] Não
          : '''))
-        while conf != 1 and conf != 2:
-            conf = int(input('''Confirma seu voto em EVANDRO ALVES para vereador:
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em EVANDRO ALVES para vereador:
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == 1:
+        if conf == '1':
             print('Evandro Alves')
             vereadores[4]['votos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     elif voto == 20789:
-        conf = int(input('''Confirma seu voto em RAFAEL SUGESMUNDO para vereador:
+        conf = str(input('''Confirma seu voto em RAFAEL SUGESMUNDO para vereador:
          [ 1 ] Sim
          [ 2 ] Não
          : '''))
-        while conf != 1 and conf != 2:
-            conf = int(input('''Confirma seu voto em RAFAEL SUGESMUNDO para vereador:
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em RAFAEL SUGESMUNDO para vereador:
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == 1:
+        if conf == '1':
             print('Rafael Sugesmundo')
             vereadores[5]['votos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     elif voto == 10333:
-        conf = int(input('''Confirma seu voto em MARCOS PACHECO para vereador:
+        conf = str(input('''Confirma seu voto em MARCOS PACHECO para vereador:
          [ 1 ] Sim
          [ 2 ] Não
          : '''))
-        while conf != 1 and conf != 2:
-            conf = int(input('''Confirma seu voto em MARCOS PACHECO para vereador:
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em MARCOS PACHECO para vereador:
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == 1:
+        if conf == '1':
             print('Marcos Pacheco')
             vereadores[6]['votos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     elif voto == 20963:
-        conf = int(input('''Confirma seu voto em FABIO HENRIQUE para vereador:
+        conf = str(input('''Confirma seu voto em FABIO HENRIQUE para vereador:
          [ 1 ] Sim
          [ 2 ] Não
          : '''))
-        while conf != 1 and conf != 2:
-            conf = int(input('''Confirma seu voto em FABIO HENRIQUE para vereador:
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em FABIO HENRIQUE para vereador:
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == 1:
+        if conf == '1':
             print('Fabio Henrique')
             vereadores[7]['votos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     elif voto == 10100:
-        conf = int(input('''Confirma seu voto em JEAN GOMES para vereador:
+        conf = str(input('''Confirma seu voto em JEAN GOMES para vereador:
          [ 1 ] Sim
          [ 2 ] Não
          : '''))
-        while conf != 1 and conf != 2:
-            conf = int(input('''Confirma seu voto em JEAN GOMES para vereador:
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em JEAN GOMES para vereador:
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == 1:
+        if conf == '1':
             print('Jean Gomes')
             vereadores[8]['votos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     elif voto == 35555:
-        conf = int(input('''Confirma seu voto em JESSICA MENDES para vereador:
+        conf = str(input('''Confirma seu voto em JESSICA MENDES para vereador:
          [ 1 ] Sim
          [ 2 ] Não
          : '''))
-        while conf != 1 and conf != 2:
-            conf = int(input('''Confirma seu voto em JESSICA MENDES para vereador:
+        while conf != '1' and conf != '2':
+            conf = str(input('''Confirma seu voto em JESSICA MENDES para vereador:
              [ 1 ] Sim
              [ 2 ] Não
              : '''))
-        if conf == 1:
+        if conf == '1':
             print('Jessica Mendes')
             vereadores[9]['votos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     elif voto == 1:
-        option = str(input('tem certeza que deseja votar em "BRANCO"? Sim = [S], Não = [N]: '))
-        while option != 's' and option != 'n':
-            option = str(input('tem certeza que deseja votar em "BRANCO"? Sim = [S], Não = [N]: '))
-        if option == 's':
+        option = str(input('''tem certeza que deseja votar em "BRANCO"?'
+        [ 1 ] Sim
+        [ 2 ] Não
+        : '''))
+        while option != '1' and option != '2':
+            option = str(input('''tem certeza que deseja votar em "BRANCO"?'
+        [ 1 ] Sim
+        [ 2 ] Não
+        : '''))
+        if option == '1':
             print('Seu voto foi "Branco" para vereador.')
             nulos_brancos_vereadores[1]['Brancos'] += 1
             tela_fim()
         else:
             tela_votação_vereador()
     else:
-        option = str(input('Tem certeza que quer "ANULAR" seu voto? Sim = [S], Não = [N]: '))
-        while option != 's' and option != 'n':
-            option = str(input('Tem certeza que quer "ANULAR" seu voto? Sim = [S], Não = [N]: '))
-        if option == 'n':
+        option = str(input('''Tem certeza que quer "ANULAR" seu voto?
+        [ 1 ] Sim
+        [ 2 ] Não
+        : '''))
+        while option != '1' and option != '2':
+            option = str(input('''Tem certeza que quer "ANULAR" seu voto?
+        [ 1 ] Sim
+        [ 2 ] Não
+        : '''))
+        if option == '2':
             tela_votação_vereador()
         else:
             print('Seu voto para vereador foi anulado.')
