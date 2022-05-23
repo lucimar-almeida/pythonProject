@@ -22,7 +22,6 @@ while pergunta1 != '1' and pergunta1 != '2':
     [ 1 ] Sim
     [ 2 ] Não
     : '''))
-
 if pergunta1 == '1':
     print('Você errou! estude mais o assunto.')
 elif pergunta1 == '2':
