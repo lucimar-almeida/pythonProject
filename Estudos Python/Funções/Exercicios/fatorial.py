@@ -1,4 +1,4 @@
-def fatorial(n, show=False):
+def fatorial(n, show=True):
     """
     -> Calcula o fatorial de número
     :param n: O número a ser calculado
@@ -19,6 +19,7 @@ def fatorial(n, show=False):
 
 # Programa principal
 num = int(input(f'Digitie um numero: '))
+
 print(fatorial(num))
 
-help(fatorial)
+# help(fatorial)
