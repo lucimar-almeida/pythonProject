@@ -38,4 +38,4 @@ for p in galera:
     else:
         print(f'{p[0]} é menor de idade.')
         totalmenor += 1
-print(f'Temos {totalmenor} de idade e {totalMaior} de idade.')
+print(f'Temos {totalmenor} de idade e {totalMaior} de idade.')  
