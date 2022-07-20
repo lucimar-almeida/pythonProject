@@ -8,24 +8,32 @@ from selenium.webdriver.chrome.service import Service
 
 from webdriver_manager.chrome import ChromeDriverManager
 
+from selenium.webdriver.chrome.options import Options
+
 from time import sleep
 
 from selenium.webdriver.common.by import By
 
+from datetime import datetime
+
 import pandas as pd
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+options = Options()
+options.add_argument('--headless')
 
-lista_empresas = ['PETR4', 'VIIA3', 'BBDC4', 'WEGE3', 'LEVE3', 'AZUL4',
-                  'GOLL4', 'CEAB3', 'BRML3', 'COGN3', 'CVCB3', 'GGBR4', 'MDNE3']
+driver = webdriver.Chrome(service=Service(
+    ChromeDriverManager().install()), options=options)
+
+empresas = ['PETR4', 'VIIA3', 'BBDC4']
+# , 'WEGE3', 'LEVE3', 'AZUL4','GOLL4', 'CEAB3', 'BRML3', 'COGN3', 'CVCB3', 'GGBR4', 'MDNE3']
+cotacao = list()
+data_hora = list()
 
 driver.get(
     'https://br.advfn.com/')
 sleep(2)
 
-empresas_cotacao = list()
-
-for empresa in lista_empresas:
+for empresa in empresas:
     #driver.find_element(By.XPATH, '//*[@id="header__search"]').click()
     input_busca = driver.find_element(
         By.XPATH, '//*[@id="headerQuickQuoteSearch"]')
@@ -38,21 +46,24 @@ for empresa in lista_empresas:
         By.XPATH, '//*[@id="quoteElementPiece1"]')
 
     cotacao_valor = span_val.text
- 
-    print(f'Valor da cotação da {empresa}: {cotacao_valor} reais')
 
-    dados = list()
-    dados.append(empresa)
-    dados.append(cotacao_valor)
-    empresas_cotacao.append(dados[:])
-    dados.clear()
+    #print(f'Valor da cotação da {empresa}: {cotacao_valor} reais')
 
-print(empresas_cotacao)
+    cotacao.append(cotacao_valor)
+    data_hora.append(datetime.now().strftime('%d/%m/%y %H:%M:%S'))
+    print(f'Buscando cotação da {empresa} ...')
 
-planilha = pd.DataFrame(empresas_cotacao)
 
-print(planilha)
+dados = {
+    'Empresa': empresas,
+    'Cotação': cotacao,
+    'Data/Hora': data_hora,
+}
 
-planilha.to_excel('./planilha.xlsx')
+#print(dados)
+
+pd_empresas = pd.DataFrame(dados)
+print(pd_empresas)
+pd_empresas.to_excel('./ Cotações empresas.xlsx', index=False)
 
 input('')
