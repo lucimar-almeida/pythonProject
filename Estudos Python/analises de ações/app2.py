@@ -24,8 +24,8 @@ options.add_argument('--headless')
 driver = webdriver.Chrome(service=Service(
     ChromeDriverManager().install()), options=options)
 
-empresas = ['PETR4', 'VIIA3', 'BBDC4']
-# , 'WEGE3', 'LEVE3', 'AZUL4','GOLL4', 'CEAB3', 'BRML3', 'COGN3', 'CVCB3', 'GGBR4', 'MDNE3']
+empresas = ['PETR4', 'VIIA3', 'BBDC4', 'WEGE3', 'LEVE3', 'AZUL4',
+            'GOLL4', 'CEAB3', 'BRML3', 'COGN3', 'CVCB3', 'GGBR4', 'MDNE3']
 cotacao = list()
 data_hora = list()
 
@@ -60,7 +60,7 @@ dados = {
     'Data/Hora': data_hora,
 }
 
-#print(dados)
+# print(dados)
 
 pd_empresas = pd.DataFrame(dados)
 print(pd_empresas)
