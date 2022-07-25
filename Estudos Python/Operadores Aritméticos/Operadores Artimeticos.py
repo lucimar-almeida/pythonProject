@@ -14,8 +14,8 @@
 # e=18%2
 # print('e:', e)
 
-# f=122%3
-# print('f:', f)
+f=122%3
+print('f:', f)
 
 # g=4**3
 # print('g:', g)
