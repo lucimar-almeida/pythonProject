@@ -76,4 +76,4 @@ dados = coleta_dados()
 cria_excel(dados, './Cotações das empresas.xlsx')
 
 
-#input('')
+# input('')
