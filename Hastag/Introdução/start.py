@@ -22,7 +22,7 @@ print("Meu nome é " + nome + "!")
 print("Meu nome é" in "Lucimar")
 print("L" in "Lucimar")
 
-#------------------------------------------------------------
+# ------------------------------------------------------------
 
 # Variaveis
 
@@ -55,3 +55,13 @@ print(lucro)
 
 codigo_bebida = input('Insira o codigo da bebida para saber se é alcoolica?')
 print('BAC' in codigo_bebida)
+
+# --------------------------------------------------------
+# Variaveis
+# int = Inteiro
+# string = Texo
+# float = Números com casas decimais (ponto flutuante)
+# bool ou boolean = True pu False
+# Obs. 1: Variaveis em Python não são decladas  explicitamente, mas isso não significa que vc deve ficar mudando o tempo todo 
+# Obs. 2: Cuidado com os números restritos (arquivos p/ download)
+
