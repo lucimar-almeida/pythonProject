@@ -65,3 +65,38 @@ print('BAC' in codigo_bebida)
 # Obs. 1: Variaveis em Python não são decladas  explicitamente, mas isso não significa que vc deve ficar mudando o tempo todo 
 # Obs. 2: Cuidado com os números restritos (arquivos p/ download)
 
+# -------------------------------------------------------
+faturamento = 1000
+custo = 500
+lucro = faturamento - custo
+print('O faturamento foi ' + str(faturamento) + ' reais.')
+print('O custo da loja foi de ' + str(custo) + ' reais.')
+print('A assim o lucro da loja foi de ' + str(lucro) + ' reais.')
+
+print('O faturamento da lojo foi de {}'.format(faturamento))
+
+print('O faturamento da loja foi {} reais. O custo da loja foi de {} reais. O lucro da loja foi de {} reais.'.format(
+    faturamento, custo, lucro))
+
+# ------------------------------------------------------
+# Comparadores
+# == igual
+# != diferente
+# > maior que
+# < menor que
+# in texto existe dentro de outro
+# not verifica o contrario da comparação
+# Em alguma operação vc não quiser fazer nada, simplesmente use o   pass
+
+# -----------------------------------------------------
+
+meta = 50000
+qtde_vendidas = 56000
+
+if qtde_vendidas > meta:
+    print('batemos a meta de vendas de Iphone, vendemos {} unidades.'.format(
+        qtde_vendidas))
+print('Fim do programa!')
+
+# ------------------------------------------------------
+
