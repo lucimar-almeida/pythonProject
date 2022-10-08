@@ -17,7 +17,7 @@ print(7 % 3)  # Resto da divisão
 nome = "Lucimar"
 print("Meu nome é " + nome + "!")
 
-#in
+# in
 # case sensiive - significa que maiusculo e minusculo é diferente para meios de comparação
 print("Meu nome é" in "Lucimar")
 print("L" in "Lucimar")
@@ -62,7 +62,7 @@ print('BAC' in codigo_bebida)
 # string = Texo
 # float = Números com casas decimais (ponto flutuante)
 # bool ou boolean = True pu False
-# Obs. 1: Variaveis em Python não são decladas  explicitamente, mas isso não significa que vc deve ficar mudando o tempo todo 
+# Obs. 1: Variaveis em Python não são decladas  explicitamente, mas isso não significa que vc deve ficar mudando o tempo todo
 # Obs. 2: Cuidado com os números restritos (arquivos p/ download)
 
 # -------------------------------------------------------
@@ -100,3 +100,165 @@ print('Fim do programa!')
 
 # ------------------------------------------------------
 
+meta = 1000
+
+vendas_funcionario_1 = 1000
+vendas_funcionario_2 = 770
+vendas_funcionario_3 = 2700
+
+
+if vendas_funcionario_1 >= 1000:
+    print('O funcionario 1 ganhou {} bonus.'.format(meta * 0.1))
+else:
+    print('O funcionario 1 não ganhou bônus.')
+
+if vendas_funcionario_2 >= 1000:
+    print('O funcionario 2 ganhou {} bonus.'.format(meta * 0.1))
+else:
+    print('O funcionario 2 não ganhou bônus.')
+
+if vendas_funcionario_3 >= 1000:
+    print('O funcionario 3 ganhou {} bonus.'.format(meta * 0.1))
+else:
+    print('O funcionario 3 não ganhou bônus.')
+
+print('-----------------------------------------')
+
+
+if vendas_funcionario_1 >= 2000:
+    bonus = (vendas_funcionario_1 * 0.015)
+elif vendas_funcionario_1 < 2000:
+    bonus = (vendas_funcionario_1 * 0.01)
+else:
+    bonus = 0
+print('O funcionario 1 ganhou {} de bônus!'.format(bonus))
+
+if vendas_funcionario_2 >= 2000:
+    bonus = (vendas_funcionario_2 * 0.015)
+elif vendas_funcionario_2 < 2000:
+    bonus = (vendas_funcionario_2 * 0.01)
+else:
+    bonus = 0
+print('O funcionario 2 ganhou {} de bônus!'.format(bonus))
+
+if vendas_funcionario_3 >= 2000:
+    bonus = (vendas_funcionario_3 * 0.015)
+elif vendas_funcionario_3 < 2000:
+    bonus = (vendas_funcionario_3 * 0.01)
+else:
+    ponus = 0
+print('O funcionario 3 ganhou {} de bônus!'.format(bonus))
+
+print('-----------------------------------------')
+
+
+meta_funcionario = 10000
+meta_loja = 250000
+vendas_funcionario = 5000
+vendas_loja = 200000
+
+if vendas_funcionario > meta_funcionario and vendas_loja > meta_loja:
+    bonus = 0.03 * vendas_funcionario
+    print('Bônus do funcionario foi de {}.'.format(bonus))
+else:
+    print('O funcionario não ganhou bônus.')
+
+print('-----------------------------------------')
+
+nota_meta = 9
+nota_funcionario = 5
+
+if nota_funcionario >= nota_meta or (vendas_funcionario > meta_funcionario and vendas_loja > meta_loja):
+    bonus = vendas_funcionario * 0.015
+    print('O funcionario ganhou {} de bônus!'.format(bonus))
+else:
+    print('O funcionario não ganhou bônus!')
+# -------------------------------------------------------------
+
+faturamento = input('Qual o faturamento da loja?')
+custo = input('Qual o custo da loja?')
+
+if faturamento:
+    lucro = int(faturamento) - int(custo)
+    print('O lucro da loja foi de {} reais'.format(lucro))
+else:
+    print('Preencha corretamente os espaços necessarios!')
+
+
+# --------------------------------------------------------
+produto = str(input('Qual o produto?'))
+categoria = str(input('Qual a categoria do Produto?'))
+qtde_str = str(input('Qual a quantidade do produto?'))
+
+
+if produto and categoria and qtde_str:
+    qtde = int(qtde_str)
+    if categoria == 'bebidas':
+        if qtde < 75:
+            print(
+                f'Soliciatar {categoria} a equipe de compras, temos apenas {qtde} unidades em estoque.')
+    if categoria == 'limpeza':
+        if qtde < 30:
+            print(
+                f'Solicitar {categoria} a equipe de compras, temos apenas {qtde} unidades em estoque.')
+
+else:
+    print('Preencha todas as informações')
+
+# -----------------------------------------------------
+# exercicio 1
+numero_1 = int(input('Digite o primeiro número: '))
+numero_2 = int(input('Digite o segundo número: '))
+
+if numero_1 > numero_2:
+    print(f'O número maior é {numero_1}')
+elif numero_2 > numero_1:
+    print(f'O número maior é {numero_2}')
+else:
+    print(f'Os números {numero_1} e {numero_2} são iguais!')
+
+# -----------------------------------------------------
+# exercicio 2
+
+numero = int(input('Digite um número: '))
+if numero > 0:
+    print(f'O número {numero} é positivo!')
+elif numero < 0:
+    print(f'O número {numero} é negativo!')
+else:
+    print('O número é 0 e não é positivo e nem negativo!')
+
+# -----------------------------------------------------
+# exercicio 3
+
+
+def qual_sexo():
+    sexo = input('F - Feminino\nM - Masculino\n:')
+    if sexo == 'f':
+        print('O sexo é feminino.')
+    elif sexo == 'm':
+        print('o sexo é masculino.')
+    else:
+        print('Digite "F" ou "M"?')
+        qual_sexo()
+
+
+qual_sexo()
+
+# -----------------------------------------------------
+# exercicio 4
+
+emails_spams = ('fulano@gmail.com, beltrano@gmail.com, ciclano@gmail.com')
+
+email = input('Digite o email para a verificação no banco de dados: ')
+
+if '@' in email:
+    if email in emails_spams:
+        print('Email encontrado no sistema.')
+    else:
+        print('Email não encontrado no sistema.')
+else:
+    print('Email invalido! tente novamente.')
+
+# -----------------------------------------------------
+# exercicio 5
