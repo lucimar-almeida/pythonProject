@@ -250,15 +250,49 @@ qual_sexo()
 
 emails_spams = ('fulano@gmail.com, beltrano@gmail.com, ciclano@gmail.com')
 
-email = input('Digite o email para a verificação no banco de dados: ')
 
-if '@' in email:
-    if email in emails_spams:
-        print('Email encontrado no sistema.')
+def validacao():
+    email = input('Digite o email para a verificação no banco de dados: ')
+
+    if '@' in email and '.com' in email:
+        if email in emails_spams:
+            print('Email encontrado no sistema.')
+        else:
+            print('Email não encontrado no sistema.')
+            validacao()
     else:
-        print('Email não encontrado no sistema.')
-else:
-    print('Email invalido! tente novamente.')
+        print('Email invalido! tente novamente.')
+        validacao()
+
+
+validacao()
 
 # -----------------------------------------------------
 # exercicio 5
+
+# 5. Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:
+
+# A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+# A mensagem "Reprovado", se a média for menor do que sete;
+# A mensagem "Aprovado com Distinção", se a média for igual a dez.
+
+nota1 = int(input('Digite a nota 1: '))
+nota2 = int(input('Digite a nota 2: '))
+
+
+def calculo_nota(n1, n2):
+
+    media = (n1 + n2) / 2
+
+    if media < 7:
+        print(f'Reprovado, sua média é menor que {media}!')
+    elif media >= 7 and media < 9.5:
+        print(f'Aprovado, sua média é maior que {media}!')
+    elif media == 10:
+        print(f'Aprovado com destinção, sua média foi {media}!')
+
+
+calculo_nota(nota1, nota2)
+
+# ----------------------------------------------------
+# Exercicio 6
