@@ -295,4 +295,7 @@ def calculo_nota(n1, n2):
 calculo_nota(nota1, nota2)
 
 # ----------------------------------------------------
-# Exercicio 6
+# Exercicio 9
+# 9. Faça um Programa que leia três números e mostre-os em ordem decrescente.
+
+
