@@ -19,4 +19,4 @@ def homepage():
 
 #colocar no ar
 
-app.run()
+app.run(debug=True)
