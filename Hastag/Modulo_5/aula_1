@@ -1,0 +1,21 @@
+# int -> inteiro
+# string -> texto
+# flout -> números como casas decimais (ponto flutuante)
+# bool ou boolean -> True ou False
+
+faturamento = 1000
+custo = 500
+lucro = faturamento - custo
+
+print('o faturamento da loja foi ' + str(faturamento) + ', O custo da loja foi ' + str(custo) + ' e Assim, o lucro da loja foi de ' + str(lucro) + ' reais')
+
+# F-string
+
+print(f'O faturamento foi {faturamento}, o custo da loja foi de {custo} e assim, o lucro foi de {lucro} reais')
+
+# Mudança de tipo de variáveis
+
+faturamento = int(input('Insira o faturamento: '))
+custo = int(input('Insira o custo: '))
+lucro = faturamento - custo
+print(lucro)
