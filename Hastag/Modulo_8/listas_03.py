@@ -26,7 +26,16 @@ E agora, como eu faço para descobrir a quantidade em estoque do produto geladei
 
 
 """Crie um programa para fazer uma consulta de estoque. O usuário do programa deve inserir o nome do produto e, caso ele não exista na lista, ele deve ser avisado. Caso exista, o programa deve dizer a quantidade de unidades em estoque do produto"""
-
+"""
 i = produtos.index('geladeira')
-print(i)
+qtde_estoque = estoque[i]
+print(f"Quantidade em estoque da geladeira é de {qtde_estoque} unidades")
+"""
 
+produto = input('Insira o nome do produto em letra minúscula: ')
+if produto in produtos:
+    i = produtos.index(produto)
+    qtde_estoque = estoque[i]
+    print(f'Quantidade em estoque de {produto} é de: {qtde_estoque}')
+else:
+    print("Não existe no estoque!")
