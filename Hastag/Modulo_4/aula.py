@@ -1,5 +1,6 @@
 #Variaveis
 
+
 qtade_vendas = 1500
 nome = 'Lucimar'
 
