@@ -1,0 +1,60 @@
+COMANDO EXPO
+
+-Como criar um projeto novo:
+	expo init "nome que será dado ao projeto"
+- Como abrir um projeto com expo:
+	expo start "nome do projeto"
+- Abrir o VScode dentro CMD:
+	code .
+========================================================
+	COMANDO PARA REACT-NATIVE ANDROID STUDIO
+
+- Comando para criar um projeto novo com react
+	npx react-native init seuApp
+
+- Abrir o projeto no android studio
+	npx react-native run-android
+========================================================
+
+COMANDO CMD PARA PASTAS
+
+- Voltar pasta => cd..
+- Próxima pasta => cd (nome da pasta)
+- Ver o que tem na pasta => dir
+- Limpar tela => cls
+- Criar uma pasta => md (nome da pasta)
+
+- Remover uma pasta => rd (nome da pasta)
+=================================================
+COMANDO REACTJS
+- Criar um novo projeto: na pasta onde será o projeto
+	npx create-react-app (nome do projeto)
+
+- Para iniciar o projeto: dentro da pasta do projeto
+	npm start
+
+- Instalar a biblioteca que faz as rotas dentro do projeto
+	npm install react-router-dom
+    
+ARQUIVOS PARA APAGAR NO PROJETO
+ app.css
+app.js
+logo.svg
+app.test.js
+setup.test
+reportWebVitals.js
+============================================================
+COMANDOS PARA PYTHON
+- Para desbloquear o PowerShell
+	Set-ExecutionPolicy -Scope CurrentUser_ExecutionPolicy RemoteSigned
+
+- Para Criar um ambiente virtual para o projeto, entre na pasta do projeto.
+	Python -m venv “nome da pasta”
+
+- Para ativar o ambiente virtual, entre na pasta do ambiente virtual.
+	CMD =>   .\” nome da pasta”\Scripts\Activate.bat
+
+	PowerShell =>  .\” nome da pasta”\Scripts\Activate.ps1
+
+	Para fazer deploy e pegar todas as bibliotecas do projeto => 
+	Pip freeze > “requirements.txt”
