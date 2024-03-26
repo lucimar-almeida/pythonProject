@@ -7,7 +7,15 @@
 # - Se o usuário inserir um produto que não existe na lista, o programa deve inserir na lista, printar a mensagem Produto X cadastrado com sucesso e em seguida printar a lista completa
 
 produtos = ["celular", "camera", "fone de ouvido", "monitor"]
+novo_produto = input('Digite o produto: ')
+novo_produto = novo_produto.lower()
 
+if novo_produto in produtos:
+    print(f'O produto {novo_produto} já existe na lista!')
+else:
+    produtos.append(novo_produto)
+    print(f'Produto adicionado na lista com sucesso!')
+    print(produtos)
 
 # Exercício 2
 # Crie um sistema de consulta de preços
