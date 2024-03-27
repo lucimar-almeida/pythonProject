@@ -33,4 +33,4 @@ vendas_vendedor2 = sum(vendas[1])
 if vendas_vendedor1 > vendas_vendedor2:
     print('o Vendedor 1 vendou mais que o vendedor 2')
 else:
-        print('o Vendedor 2 vendou mais que o vendedor 2')
+    print('o Vendedor 2 vendou mais que o vendedor 1')
