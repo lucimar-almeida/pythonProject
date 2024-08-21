@@ -12,7 +12,7 @@ def space():
 
 def subtitulo(text):
     print('-' * 5, text, '-' * 5)
-,
+    
 
 # Candidatos a prefeito
 prefeitos = [{'Candidato': 'Ademir da Guia', 'votos': 0}, # 'Número': 10
