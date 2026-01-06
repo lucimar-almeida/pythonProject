@@ -1,3 +1,17 @@
+import customtkinter as ctk
+
+# Configurar a aparência da interface
+ctk.set_appearance_mode("System")  # Modos: "System" (p
+
+# Criar janela principaladrão), "Dark", "Light"
+app = ctk.CTk()
+app.title('Urna Eletronica')
+app.geometry('400x300')
+
+# Criação de campos
+
+#criação de funções e funcionalidades
+
 # Projeto ADS - "Urna Eletronica"
 
 def tela(titulo):
@@ -13,6 +27,7 @@ def space():
 def subtitulo(text):
     print('-' * 5, text, '-' * 5)
     
+
 
 # Candidatos a prefeito
 prefeitos = [{'Candidato': 'Ademir da Guia', 'votos': 0}, # 'Número': 10
@@ -405,3 +420,6 @@ def tela_fim():
     else:
         tela_fim()
 tela_principal()
+
+# Iniciair aplicação
+app.mainloop()
